@@ -327,10 +327,10 @@ include_directories(grpc)
 # This way each target in this file can share settings and override them if
 # needed.
 add_library(ProjectConfig INTERFACE)
-target_compile_features(ProjectConfig
-  INTERFACE
-    cxx_std_${FLATBUFFERS_CPP_STD}
-)
+# target_compile_features(ProjectConfig
+#   INTERFACE
+#     cxx_std_${FLATBUFFERS_CPP_STD}
+# )
 
 # Force the standard to be met.
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
